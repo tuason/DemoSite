@@ -28,6 +28,8 @@ INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE)
 -- In the example below, there is only one page templates "basic" providing a header, footer, and sidebar around the content
 -- The full path to the template is .../WEB_INF/jsp/templates/content/default.html
 INSERT INTO BLC_PAGE_TMPLT (PAGE_TMPLT_ID, TMPLT_NAME, TMPLT_DESCR, TMPLT_PATH) VALUES (1, 'Basic Template', 'This template provides a basic layout with header and footer surrounding the content and title.', '/content/default') ;
+-- Tuason/ms: added a new one, without the right hand form...
+INSERT INTO BLC_PAGE_TMPLT (PAGE_TMPLT_ID, TMPLT_NAME, TMPLT_DESCR, TMPLT_PATH) VALUES (2, 'Basic Simple Template', 'This template provides a basic layout with header and footer surrounding the content and title, but no right side component.', '/content/default_no_right') ;
 
 
 --
