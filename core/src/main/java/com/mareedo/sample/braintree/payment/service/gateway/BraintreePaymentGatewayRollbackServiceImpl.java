@@ -1,9 +1,23 @@
 package com.mareedo.sample.braintree.payment.service.gateway;
 
 import com.braintreegateway.BraintreeGateway;
+import com.braintreegateway.Result;
+import com.braintreegateway.Transaction;
+import com.braintreegateway.ValidationError;
+import com.mareedo.sample.braintree.braintreePaymentGateway.service.payment.BraintreePaymentGatewayType;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.broadleafcommerce.common.money.Money;
+import org.broadleafcommerce.common.payment.PaymentTransactionType;
+import org.broadleafcommerce.common.payment.PaymentType;
+import org.broadleafcommerce.common.payment.dto.PaymentRequestDTO;
+import org.broadleafcommerce.common.payment.dto.PaymentResponseDTO;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayRollbackService;
+import org.broadleafcommerce.common.vendor.service.exception.PaymentException;
+import org.broadleafcommerce.core.order.service.OrderService;
+import org.broadleafcommerce.core.payment.domain.OrderPayment;
+import org.broadleafcommerce.core.payment.domain.PaymentTransaction;
+import org.broadleafcommerce.core.payment.service.OrderPaymentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,7 +40,8 @@ public class BraintreePaymentGatewayRollbackServiceImpl implements PaymentGatewa
     private OrderService orderService;
 
     @Override
-    public PaymentResponseDTO rollbackAuthorize(PaymentRequestDTO transactionToBeRolledBack) throws PaymentException {
+    public PaymentResponseDTO rollbackAuthorize( PaymentRequestDTO transactionToBeRolledBack) throws PaymentException
+    {
         return this.voidTransaction(transactionToBeRolledBack);
     }
 
@@ -58,7 +73,7 @@ public class BraintreePaymentGatewayRollbackServiceImpl implements PaymentGatewa
             for (PaymentTransaction paymentTransaction : orderPayment.getTransactions()) {
                 String gatewayTransactionId = paymentTransaction.getAdditionalFields().get("GATEWAY_TRANSACTION_ID");
                 if (gatewayTransactionId != null) {
-                    Result<Transaction> result = gateway.transaction().voidTransaction(gatewayTransactionId);
+                    Result<Transaction> result = gateway.transaction().voidTransaction( gatewayTransactionId);
 
                     if (!result.isSuccess()) {
                         for (ValidationError braintreeError : result.getErrors().getAllDeepValidationErrors()) {
@@ -71,9 +86,9 @@ public class BraintreePaymentGatewayRollbackServiceImpl implements PaymentGatewa
             }
         }
 
-        return new PaymentResponseDTO(PaymentType.CREDIT_CARD, BraintreePaymentGatewayType.BRAINTREE_GATEWAY)
+        return new PaymentResponseDTO( PaymentType.CREDIT_CARD, BraintreePaymentGatewayType.BRAINTREE_GATEWAY)
                         .rawResponse("rollback authorize - successful").successful(success)
-                        .paymentTransactionType(PaymentTransactionType.VOID)
-                        .amount(new Money(transactionToBeRolledBack.getTransactionTotal()));
+                        .paymentTransactionType( PaymentTransactionType.VOID)
+                        .amount(new Money( transactionToBeRolledBack.getTransactionTotal()));
     }
 }
