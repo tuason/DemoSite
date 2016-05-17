@@ -20,6 +20,7 @@
 
 package com.mareedo.sample.payment.service.gateway;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayType;
 import org.apache.commons.lang.ArrayUtils;
 import org.broadleafcommerce.common.money.Money;
@@ -29,7 +30,6 @@ import org.broadleafcommerce.common.payment.dto.PaymentResponseDTO;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayWebResponsePrintService;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayWebResponseService;
 import org.broadleafcommerce.common.vendor.service.exception.PaymentException;
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

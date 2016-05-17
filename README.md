@@ -7,3 +7,14 @@ One typical way of using this project would be to follow the [Getting Started Gu
 However, if you would like to utilize your own workspace or IDE configuration, you may prefer to fork this project. This would give you the added benefit of being able to pull in upstream changes as we work to improve the DemoSite.
 
  Note: If you are going to fork this project, we recommend basing your work on the `master` branch, and not the develop branch. develop is our ongoing development branch and there are no guarantees of stability on it.
+
+
+
+
+### Mareedo specific stuff ###
+
+There is a newly installed plugin for braintree payments included... check `common-shared.properties` for the settings and have a look into the core module under `com.mareedo.sample.braintree` package.
+
+
+The admin is accessible with user `admin` and password `marEEdo`
+

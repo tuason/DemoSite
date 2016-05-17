@@ -20,6 +20,7 @@
 
 package com.mareedo.sample.vendor.nullPaymentGateway.web.processor;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.broadleafcommerce.common.payment.dto.PaymentResponseDTO;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayConfiguration;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayTransparentRedirectService;
@@ -27,13 +28,10 @@ import org.broadleafcommerce.common.web.payment.processor.AbstractTRCreditCardEx
 import org.broadleafcommerce.common.web.payment.processor.TRCreditCardExtensionManager;
 import org.springframework.stereotype.Service;
 
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This sample handler will add itself to the {@link TRCreditCardExtensionManager}

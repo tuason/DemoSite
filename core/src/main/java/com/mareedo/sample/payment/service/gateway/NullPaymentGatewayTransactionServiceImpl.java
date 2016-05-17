@@ -1,5 +1,6 @@
 package com.mareedo.sample.payment.service.gateway;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayType;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.CreditCardValidator;
 import org.broadleafcommerce.common.money.Money;
@@ -12,7 +13,6 @@ import org.broadleafcommerce.common.payment.service.PaymentGatewayTransactionSer
 import org.broadleafcommerce.common.vendor.service.exception.PaymentException;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayType;
 
 /**
  * This is an example implementation of a {@link org.broadleafcommerce.common.payment.service.PaymentGatewayTransactionService}.

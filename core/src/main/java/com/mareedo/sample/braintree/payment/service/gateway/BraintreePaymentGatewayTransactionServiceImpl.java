@@ -1,5 +1,6 @@
 package com.mareedo.sample.braintree.payment.service.gateway;
 
+
 import com.braintreegateway.BraintreeGateway;
 import com.braintreegateway.Result;
 import com.braintreegateway.Transaction;

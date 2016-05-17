@@ -16,8 +16,6 @@
 
 package com.mareedo.controller.catalog;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.broadleafcommerce.core.web.controller.catalog.BroadleafRatingsController;
 import org.broadleafcommerce.core.web.controller.catalog.ReviewForm;
 import org.springframework.stereotype.Controller;
@@ -26,6 +24,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class RatingsController extends BroadleafRatingsController {

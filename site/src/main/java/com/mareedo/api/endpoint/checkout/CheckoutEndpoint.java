@@ -23,9 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * This is a reference REST API endpoint for checkout. This can be modified, used as is, or removed. 

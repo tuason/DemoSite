@@ -19,6 +19,7 @@
  */
 package com.mareedo.sample.vendor.nullPaymentGateway.web.controller;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.broadleafcommerce.common.payment.dto.PaymentResponseDTO;
@@ -32,12 +33,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
-
-import java.util.Map;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * @author Elbert Bautista (elbertbautista)

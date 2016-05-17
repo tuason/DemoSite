@@ -17,14 +17,12 @@
 package com.mareedo.controller.checkout;
 
 import org.broadleafcommerce.common.exception.ServiceException;
-import org.broadleafcommerce.core.order.domain.Order;
 import org.broadleafcommerce.core.pricing.service.exception.PricingException;
 import org.broadleafcommerce.core.web.checkout.model.BillingInfoForm;
 import org.broadleafcommerce.core.web.checkout.model.GiftCardInfoForm;
 import org.broadleafcommerce.core.web.checkout.model.OrderInfoForm;
 import org.broadleafcommerce.core.web.checkout.model.ShippingInfoForm;
 import org.broadleafcommerce.core.web.controller.checkout.BroadleafBillingInfoController;
-import org.broadleafcommerce.core.web.order.CartState;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

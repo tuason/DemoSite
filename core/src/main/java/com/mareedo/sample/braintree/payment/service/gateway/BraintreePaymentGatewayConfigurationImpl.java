@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 public class BraintreePaymentGatewayConfigurationImpl implements BraintreePaymentGatewayConfiguration
 {
 
-
     @Value("${braintree.environment}")
     private Environment environment;
 

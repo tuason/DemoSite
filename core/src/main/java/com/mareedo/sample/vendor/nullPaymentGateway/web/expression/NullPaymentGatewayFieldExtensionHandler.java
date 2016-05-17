@@ -20,11 +20,11 @@
 
 package com.mareedo.sample.vendor.nullPaymentGateway.web.expression;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.broadleafcommerce.common.payment.PaymentGatewayType;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayConfiguration;
 import org.broadleafcommerce.common.web.payment.expression.AbstractPaymentGatewayFieldExtensionHandler;
 import org.broadleafcommerce.common.web.payment.expression.PaymentGatewayFieldExtensionManager;
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

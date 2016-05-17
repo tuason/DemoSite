@@ -1,9 +1,5 @@
 package com.mareedo.controller.contactus;
 
-import java.util.HashMap;
-
-import javax.annotation.Resource;
-
 import org.broadleafcommerce.common.email.domain.EmailTargetImpl;
 import org.broadleafcommerce.common.email.service.EmailService;
 import org.broadleafcommerce.common.email.service.info.EmailInfo;
@@ -12,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.annotation.Resource;
+import java.util.HashMap;
 
 @Controller("blContactUsController")
 public class ContactUsController {

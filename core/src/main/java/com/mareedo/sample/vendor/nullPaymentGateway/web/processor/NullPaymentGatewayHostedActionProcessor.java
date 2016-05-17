@@ -19,11 +19,11 @@
  */
 package com.mareedo.sample.vendor.nullPaymentGateway.web.processor;
 
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.broadleafcommerce.common.payment.dto.PaymentRequestDTO;
 import org.broadleafcommerce.common.payment.dto.PaymentResponseDTO;
 import org.broadleafcommerce.common.payment.service.PaymentGatewayHostedService;
 import org.broadleafcommerce.common.vendor.service.exception.PaymentException;
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.Arguments;
 import org.thymeleaf.dom.Element;

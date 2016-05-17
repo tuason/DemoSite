@@ -21,9 +21,9 @@
 package com.mareedo.sample.vendor.nullPaymentGateway.web.controller;
 
 import com.mareedo.sample.payment.service.gateway.NullPaymentGatewayConfiguration;
+import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.CreditCardValidator;
-import com.mareedo.sample.vendor.nullPaymentGateway.service.payment.NullPaymentGatewayConstants;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
